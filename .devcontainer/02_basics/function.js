@@ -34,18 +34,60 @@
 // console.log("results",result);
 
 
-function loginUserMessage(username)
-{
-    return `${username} just logged in`
+// function loginUserMessage(username)
+// {
+//     return `${username} just logged in`
+// }
+// console.log(loginUserMessage("saurabh"));
+// function loginUserMessage(username)
+// {
+//     if(username===undefined)
+//     {
+//         console.log("please enter a username");
+//         return
+//     }
+//     return `${username} just logged in`
+// }
+// // console.log(loginUserMessage())
+
+
+
+// function calculateCartPrice(num1){
+//     return num1
+// }
+// console.log(calculateCartPrice(2));
+// console.log(calculateCartPrice(200,400,500));
+//bahut sare value pass kar raha hu but output main eak hi value aa raha hai but hume sare value chahiye uske liye main rest operator ka use karte hai
+//function calculateCartPrice(...num1){
+  //  return num1
+//}
+//console.log(calculateCartPrice(200,400,500))
+//rest operator ka simple matlab yah hota hai jo chijh aapke paas khudre main that means alag hai usko same list ya same group ya same packet main pack karna
+
+//function calculateCartPrice(val1,val2, ...num1){
+  //  return num1
+//}
+//console.log(calculateCartPrice(200,400,500,20000));
+
+const user={
+    username:"saurabh",
+    price:199
 }
-console.log(loginUserMessage("saurabh"));
-function loginUserMessage(username)
-{
-    if(username===undefined)
-    {
-        console.log("please enter a username");
-        return
-    }
-    return `${username} just logged in`
+function handleObject(anyObject){
+    console.log(`user name is{anyObject.username} and price is{anyObject.price}`);
 }
-console.log(loginUserMessage())
+//handleObject(user)
+
+handleObject({
+    username:"sam",
+    price:399
+})
+//console.log(handleObject());
+//handleObject(user.username)
+
+const myNewArray=[200,400,100,600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+//console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200,400,500,1000]));
