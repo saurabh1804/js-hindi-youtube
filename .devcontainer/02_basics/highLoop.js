@@ -119,14 +119,14 @@ console.log(value)
 // console.log(newNums);
 
 //Using for-Each
-const myNums=[1,2,3,4,5,6,7,8,9,10]
-const newNums=[]
-myNums.forEach((nums)=>{
-    if(nums>4){
-        newNums.push(nums)
-    }
-})
-console.log(newNums)
+// const myNums=[1,2,3,4,5,6,7,8,9,10]
+// const newNums=[]
+// myNums.forEach((nums)=>{
+//     if(nums>4){
+//         newNums.push(nums)
+//     }
+// })
+// console.log(newNums)
 
 
 
@@ -135,36 +135,93 @@ console.log(newNums)
 
 
 
-const books=[
+// const books=[
+//     {
+//         title:'Book one' , genere:'Fiction' , publish:'1981' , edition:'2004'
+//     },
+//      {
+//         title:'Book two' , genere:'non-Fiction' , publish:'1992' , edition:'2008'
+//     },
+//      {
+//         title:'Book three' , genere:'History' , publish:'1982' , edition:'2006'
+//     },
+//      {
+//         title:'Book Four' , genere:'Non-Fiction' , publish:'1988' , edition:'2004'
+//     },
+//      {
+//         title:'Book five' , genere:'Science' , publish:'2000' , edition:'2007'
+//     },
+//      {
+//         title:'Book six' , genere:'Fiction' , publish:'2001' , edition:'2014'
+//     },
+// ];
+
+// let userBooks=books.filter((bk)=>bk.genere==='history')
+// console.log(userBooks)
+
+// userBooks=books.filter((bk)=>{
+//     return bk.publish>=2000
+// })
+// console.log(userBooks);
+
+// userBooks=books.filter((bk)=>{
+//     return bk.publish>=2000 && bk.genere==='history'
+// })
+// console.log(userBooks);
+
+ const myNumber=[1,2,3,4,5,6,7,8,9,10]
+// const newNums=myNumber.map((nums)=>nums+10)
+// console.log(newNums);
+
+//
+
+//chain ka matlab hota hai do ya tin method aap eak saath use kar sakte ho aur ye hote bhi hai
+
+const newNums=myNumber
+                 .map((nums)=>nums*10)
+                 .map((nums)=>nums+1)
+                 .filter((nums)=>nums>=40)
+                 console.log(newNums);
+
+
+ //Reduce functionality
+
+//  const myNums=[1,2,3]
+//  const myTotal=myNums.reduce(function(acc,currval){
+//     return acc+currval
+//  },0)
+//  console.log(myTotal);
+
+// const myNums=[1,2,3]
+// const myTotal=myNums.reduce(function(acc,currval){
+//     console.log(`acc:${acc} and currval: ${currval}`);
+//     return acc+currval
+// },0)
+// console.log(myTotal);
+
+
+// const myTotal=myNums.reduce((acc,currval)=>acc+currval,0)
+// console.log(myTotal);
+
+
+const shoppingCart=[
     {
-        title:'Book one' , genere:'Fiction' , publish:'1981' , edition:'2004'
+    itemName:"Js course",
+    price : 2999
     },
-     {
-        title:'Book two' , genere:'non-Fiction' , publish:'1992' , edition:'2008'
+    {
+    itemName:"Py course",
+    price : 999
     },
-     {
-        title:'Book three' , genere:'History' , publish:'1982' , edition:'2006'
+    {
+    itemName:"Mobile dev course",
+    price : 5999
     },
-     {
-        title:'Book Four' , genere:'Non-Fiction' , publish:'1988' , edition:'2004'
+    {
+    itemName:"data Science course",
+    price : 12999
     },
-     {
-        title:'Book five' , genere:'Science' , publish:'2000' , edition:'2007'
-    },
-     {
-        title:'Book six' , genere:'Fiction' , publish:'2001' , edition:'2014'
-    },
-];
 
-let userBooks=books.filter((bk)=>bk.genere==='history')
-console.log(userBooks)
-
-userBooks=books.filter((bk)=>{
-    return bk.publish>=2000
-})
-console.log(userBooks);
-
-userBooks=books.filter((bk)=>{
-    return bk.publish>=2000 && bk.genere==='history'
-})
-console.log(userBooks);
+]
+const PrigeToPay=shoppingCart.reduce((acc,item)=>acc+item.price,0)
+console.log(PrigeToPay);
